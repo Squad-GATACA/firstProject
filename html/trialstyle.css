@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box
+}
+
+
+/* Set height of body and the document to 100% */
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+    scroll-behavior: smooth;
+    background-image: url(wave2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Style tab links */
+
+.tablink {
+    background-color: #4361ee;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 20px;
+    font-size: 17px;
+    max-width: 100%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+
+/* Style the tab content (and add height:100% for full page content) */
+
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 10px;
+    height: 100%;
+    text-align: center;
+}
+
+hr {
+    border-bottom: 2px rgb(5, 236, 17) solid;
+    box-shadow: 2px 2px rgb(94, 201, 142);
+}
+
+.you {
+    /*margin-left: 20px;*/
+    text-align: center;
+    max-width: 100%;
+    margin-top: 3%;
+}
+
+.img1 {
+    height: 300px;
+    width: 400px;
+    margin-top: 2%;
+}
+
+.img2 {
+    height: 300px;
+    width: 400px;
+    margin-top: 2%;
+}
+
+.img3 {
+    height: 300px;
+    width: 400px;
+    margin-top: 2%;
+}
+
+.content {
+    border: 2px solid red;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-width: thin;
+    padding: 15px;
+    border-radius: 90px;
+    text-align: center;
+}
+
+.but {
+    margin-left: 10px;
+}
+
+
+/* Style buttons */
+
+.button {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 28%;
+    border-radius: 10px;
+    margin-top: -2px;
+}
+
+
+/* Darker background on mouse-over */
+
+.btn:hover {
+    background-color: orange;
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+.steps {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.steps-title {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: -120px;
+}
+
+.step-item {
+    border: none;
+    font-family: sans-serif;
+}
+
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+footer h6 {
+    color: whitesmoke;
+}
+
+footer p {
+    color: whitesmoke;
+}
+
+footer hr {
+    border-bottom: 2px rgb(183, 23, 247) solid;
+    box-shadow: 1px 2px rgb(199, 167, 230);
+}
