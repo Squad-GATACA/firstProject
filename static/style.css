@@ -1,0 +1,190 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.top {
+    background-image: url(wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navigation-links a {
+    font-weight: bold;
+    font-family: calibri;
+    font-size: 20px;
+}
+
+ul li a:hover {
+    text-shadow: 1px 2px gray;
+    border-bottom: 1px solid red;
+    font-size: 21px;
+}
+
+.heading .main-title {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: rgb(26, 20, 27);
+    text-shadow: 3px 3px rgb(139, 214, 243);
+}
+
+.heading .sub-title {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+.slider {
+    width: 50%;
+    background-color: #669DB3FF;
+}
+
+.slider-item {
+    color: whitesmoke;
+    font-size: xx-large;
+    font-family: 'Acme', sans-serif;
+    text-shadow: 4px 4px gray;
+}
+
+.slider-item-text {
+    color: rgb(62, 1, 119);
+}
+
+hr {
+    border-bottom: 2px rgb(183, 23, 247) solid;
+    box-shadow: 1px 2px rgb(199, 167, 230);
+}
+
+.youtube-img {
+    text-align: center;
+    padding: 2em;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.fb-img {
+    text-align: center;
+    padding: 2em;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.insta-img {
+    text-align: center;
+    padding: 2em;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.visit-button {
+    margin: 10px;
+    width: 80%;
+    color: azure;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #997b66;
+    border: none;
+    border-radius: 5px;
+}
+
+a .link1 {
+    text-decoration: none;
+}
+
+.visit-button:hover {
+    color: #997b66;
+    border: 1px solid #997b66;
+    background-color: azure;
+    box-shadow: 2px 2px rgb(29, 28, 28);
+    width: 83%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.cards {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom-right-radius: 5%;
+    border-top-left-radius: 5%;
+    margin-right: 4%;
+    /*background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));*/
+}
+
+
+#scale-card
+{
+    transition: transform 0.8s;
+}
+
+
+
+.steps-title {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.step-item {
+    border: none;
+    font-family: sans-serif;
+}
+
+.numberr-one {
+    color: red;
+    background-color: rgb(238, 174, 132);
+    border-radius: 50%;
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.numberr-two {
+    color: blue;
+    background-color: rgb(134, 134, 247);
+    border-radius: 50%;
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.numberr-three {
+    color: green;
+    background-color: rgb(69, 235, 105);
+    border-radius: 50%;
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.page-end {
+    background-color: gray;
+}
+
+.page-end a {
+    color: white;
+}
+
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+footer h6 {
+    color: whitesmoke;
+}
+
+footer p {
+    color: whitesmoke;
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px){
+    .slider {
+        width: 80%;
+    }
+
+    .p-5 {
+        padding: 0;
+        padding-bottom: 3rem !important;
+    }
+}
