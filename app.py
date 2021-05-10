@@ -63,23 +63,31 @@ def youtube_video():
 def instagram_video():
     if(request.method == "POST"):
         url = request.form["link"]
-        if(url != ""):
-            try:
-                u = url.split('/')[-2]
-                os.system(
-                    f"instaloader --filename-pattern={u} -- -{u}")
-                fname = u.strip()
-                u_jpg = "-".strip()+u.strip()+"/"+fname+".jpg"
-                u_mp4 = "-".strip()+u.strip()+"/"+fname+".mp4"
-                if(os.path.isfile(u_mp4)):
-                    return send_file(u_mp4, as_attachment=True)
-                else:
-                    return send_file(u_jpg, as_attachment=True)
-            except IndexError:
-                flash("Invalid Url!!!", "danger")
-                return redirect('instagram')
-        flash("Enter Valid Instagram Link!!!", "danger")
-        return redirect('instagram')
+        ftype = request.form["filetype"]
+        if(ftype == "POST"):
+            if(url != ""):
+                try:
+                    u = url.split('/')[-2]
+                    os.system(
+                        f"instaloader --filename-pattern={u} -- -{u}")
+                    fname = u.strip()
+                    u_jpg = "-".strip()+u.strip()+"/"+fname+".jpg"
+                    u_mp4 = "-".strip()+u.strip()+"/"+fname+".mp4"
+                    if(os.path.isfile(u_mp4)):
+                        return send_file(u_mp4, as_attachment=True)
+                    else:
+                        return send_file(u_jpg, as_attachment=True)
+                except IndexError:
+                    flash("Invalid Url!!!", "danger")
+                    return redirect('instagram')
+            flash("Enter Valid Instagram Link!!!", "danger")
+            return redirect('instagram')
+        elif(ftype == "PROFILE"):
+            flash("This feature is not available right now!!!", "danger")
+            return redirect('instagram')
+        else:
+            flash("Invalid Content Type!!!", "danger")
+            return redirect('instagram')
     return redirect('instagram')
 
 
