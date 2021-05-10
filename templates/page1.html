@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" type="text/css" href="static/trialstyle.css">
+    <title>easyDownloads</title>
+</head>
+
+<body>
+    <a href="/" class=""><span class="ml-3"
+            style="float:left; color:white; font-size: large; text-shadow: 2px 2px gray;">Home</span></a>
+    <h2 class="mt-3" style="text-align: center;font-family: 'Acme', sans-serif; text-shadow: 2px 2px gray;">Download
+        Page</h2>
+    <hr class="mx-5">
+    {% with messages=get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category,message in messages %}
+    <div class="alert alert-{{category}} alert-dismissible" style="margin-bottom: 0px;">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>{{message}}</strong>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <!--   <center>
+    <div class="ml-6 mr-6">
+    <button class="tablink" onclick="openPage('Youtube', this, '#e63946')">Youtube downloader</button>
+    <button class="tablink" onclick="openPage('Instagram', this, 'green')" id="defaultOpen">Instagram Downloader</button>
+    <button class="tablink" onclick="openPage('Facebook', this, 'orange')">Facebook Downloader</button>
+    </div>
+    </center> -->
+    <nav class="navbar navbar-expand-md  ">
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><button class="tablink" onclick="openPage('Youtube', this, '#e63946')"
+                            id="defaultOpen">YouTube Downloader</button></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><button class="tablink"
+                            onclick="openPage('Instagram', this, 'green')">Instagram Downloader</button></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><button class="tablink"
+                            onclick="openPage('Facebook', this, 'orange')">Facebook Downloader</button></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="Youtube" class="tabcontent">
+        <img class="img1" src="static/Youtube.svg" alt="Youtube">
+        <form action="/download-youtube-video" method="post">
+            <div class="input-group mb-3 you">
+                <input class="content form-control" type="text" name="link" placeholder="Paste your YouTube link here"
+                    style="margin-left: 15%;margin-right: 15%;">
+            </div>
+            <div class="but">
+                <center><button class="btn btn-block button p-2" type="submit">Download</button></center>
+            </div>
+        </form>
+    </div>
+
+    <div id="Instagram" class="tabcontent">
+        <img class="img2" src="static/Instagram.svg" alt="Instagram">
+        <form action="/download-instagram-video" method="post">
+            <div class="input-group mb-3 you">
+                <input class="content form-control" type="text" name="link" placeholder="Paste your YouTube link here"
+                    style="margin-left: 15%;margin-right: 15%;">
+            </div>
+            <div class="but">
+                <center><button class="btn btn-block button p-2" type="submit">Download</button></center>
+            </div>
+        </form>
+    </div>
+
+    <div id="Facebook" class="tabcontent">
+        <img class="img3" src="static/Facebook.svg" alt="Facebook">
+
+        <form action="/download-facebook-video" method="post">
+            <div class="input-group mb-3 you">
+                <input class="content form-control" type="text" name="link" placeholder="Paste your YouTube link here"
+                    style="margin-left: 15%;margin-right: 15%;">
+            </div>
+            <div class="but">
+                <center><button class="btn btn-block button p-2" type="submit">Download</button></center>
+            </div>
+        </form>
+
+    </div>
+    <div class="steps-title" style="font-size: larger;">
+        <h4>
+            Get your video in just 3 steps!
+        </h4>
+    </div>
+    <div class="card-deck mx-5">
+
+        <div class="card step-item p-3 my-1">
+            <div class="card-body">
+                <center><span class="numberr-one">1</span>
+                    <div class="number-text mt-3">Choose the application for link</div>
+                </center>
+            </div>
+        </div>
+        <div class="card step-item p-3 my-1">
+            <div class="card-body">
+                <center><span class="numberr-two">2</span>
+                    <div class="number-text mt-3">Paste your copied URL</div>
+                </center>
+
+            </div>
+        </div>
+        <div class="card step-item p-3 my-1">
+            <div class="card-body">
+                <center><span class="numberr-three">3</span>
+                    <div class="number-text mt-3">Click <strong>"Download"</strong> to get it</div>
+                </center>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="page-footer font-small unique-color-dark pt-2 mt-5" style="background-color:#37392E;" id="footer_1">
+        <div class="container text-center text-md-left mt-2">
+
+            <div class="row mt-3">
+
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">how it works</h6>
+                    <hr class="teal accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Just paste the link of your video and click on Download button to get it.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <h6 class="text-uppercase font-weight-bold">Services</h6>
+                    <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="/html/page3.html" class="tbn">YouTube</a></p>
+                    <p><a href="/html/page3.html" class="tbn">Instagram</a></p>
+                    <p><a href="/html/page3.html" class="tbn">Facebook</a></p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">why
+                        <sapn class="text-lowercase">easydownloads</sapn>
+                    </h6>
+                    <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>It's FREE</p>
+                    <p>Easy to Use</p>
+                    <p>Fast</p>
+                    <p>100% Safe</p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="teal accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><i class="fa fa-home mr-2"></i>PCCOE, Pune 411044</p>
+                    <p><i class="fa fa-envelope-open mr-2"></i>info@example.com</p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="footer-copyright text-center py-1 text-white">© 2021 Copyright</div>
+
+    </footer>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "rgb(65, 211, 236)";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+
+</body>
+
+</html>
