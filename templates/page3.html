@@ -77,7 +77,7 @@
         <form action="/download-youtube-video" method="post">
             <div class="input-group mb-3 you">
                 <input class="content form-control" type="text" name="link" placeholder="Paste your YouTube link here"
-                    style="margin-left: 15%;margin-right: 15%;">
+                    style="margin-left: 15%;margin-right: 15%;" required>
             </div>
             <div class="but">
                 <center><button class="btn btn-block button p-2" type="submit">Download</button></center>
@@ -88,9 +88,19 @@
     <div id="Instagram" class="tabcontent">
         <img class="img2" src="static/Instagram.svg" alt="Youtube">
         <form action="/download-instagram-video" method="post">
+
             <div class="input-group mb-3 you">
-                <input class="content form-control" type="text" name="link" placeholder="Paste your YouTube link here"
-                    style="margin-left: 15%;margin-right: 15%;">
+                <input class="content form-control" type="text" name="link" placeholder="Paste your Instagram link here"
+                    style="margin-left: 15%;margin-right: 15%;" required>
+            </div>
+            <div class="input-group mb-3 you"
+                style="display: flex;flex-direction: row; justify-content: center;margin-top: 10px;margin-bottom: 30px;">
+                <select name="filetype" class="content"
+                    style="padding-left: 15px;border-radius: 10px;padding-right: 15px;height: 50px;" id="type" required>
+                    <option value="">Content Type</option>
+                    <option value="PROFILE-PICTURE">PROFILE PICTURE</option>
+                    <option value="POST">POST</option>
+                </select>
             </div>
             <div class="but">
                 <center><button class="btn btn-block button p-2" type="submit">Download</button></center>
@@ -104,7 +114,7 @@
         <form action="/download-facebook-video" method="post">
             <div class="input-group mb-3 you">
                 <input class="content form-control" type="text" name="link" placeholder="Paste your YouTube link here"
-                    style="margin-left: 15%;margin-right: 15%;">
+                    style="margin-left: 15%;margin-right: 15%;" required>
             </div>
             <div class="but">
                 <center><button class="btn btn-block button p-2" type="submit">Download</button></center>
