@@ -34,6 +34,11 @@ def aboutus():
     return render_template("aboutUs.html")
 
 
+@app.route('/contactus')
+def contactus():
+    return render_template("contact.html")
+
+
 @app.route('/facebook')
 def facebook():
     return render_template("page3.html")
