@@ -29,6 +29,11 @@ def instagram():
     return render_template("page2.html")
 
 
+@app.route('/aboutus')
+def aboutus():
+    return render_template("aboutUs.html")
+
+
 @app.route('/facebook')
 def facebook():
     return render_template("page3.html")

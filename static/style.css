@@ -80,7 +80,7 @@ hr {
     color: azure;
     font-family: sans-serif;
     font-weight: bold;
-    background-color: #997b66;
+    background-color: #007bfffb !important;
     border: none;
     border-radius: 5px;
 }
@@ -90,8 +90,8 @@ a .link1 {
 }
 
 .visit-button:hover {
-    color: #997b66;
-    border: 1px solid #997b66;
+    color: #007bfffb;
+    border: 1px solid #007bfffb;
     background-color: azure;
     box-shadow: 2px 2px rgb(29, 28, 28);
     width: 83%;
@@ -156,7 +156,9 @@ ul {
     font-size: larger;
     font-weight: bold;
 }
-
+#mid-section .my-3 {
+    margin-bottom: 0 !important;
+}
 .page-end {
     background-color: gray;
 }
@@ -177,6 +179,7 @@ footer h6 {
 footer p {
     color: whitesmoke;
 }
+
 
 @media screen and (min-width: 300px) and (max-width: 500px){
     .slider {
