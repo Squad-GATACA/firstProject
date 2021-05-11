@@ -5,6 +5,7 @@ import os
 import os.path
 import sys
 from instaloader import Post
+from instaloader import Profile
 import time
 import re
 import requests as r
@@ -88,8 +89,9 @@ def instagram_video():
             flash(
                 "This feature is not available right now!!! We are working on it.", "danger")
             return redirect('instagram')
-        elif(ftype == "PROFILE"):
-            flash("This feature is not available right now!!!", "danger")
+        elif(ftype == "PROFILE-PICTURE"):
+            flash(
+                "This feature is not available right now!!! We are Working on it.", "danger")
             return redirect('instagram')
         else:
             flash("Invalid Content Type!!!", "danger")
