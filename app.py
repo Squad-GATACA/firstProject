@@ -4,7 +4,7 @@ import instaloader
 import os
 import os.path
 import sys
-from instaloader import Profile
+from instaloader import Post
 import time
 import re
 import requests as r
@@ -70,11 +70,11 @@ def instagram_video():
         url = request.form["link"]
         ftype = request.form["filetype"]
         if(ftype == "POST"):
-            """if(url != ""):
+            if(url != ""):
                 try:
                     u = url.split('/')[-2]
                     os.system(
-                        f"instaloader --filename-pattern={u} --login=its_stranger_26 -- -{u}")
+                        f"instaloader --filename-pattern={u} --login=life_is_very_easy2021 --password=SquadPccoe2021 -- -{u}")
                     fname = u.strip()
                     u_jpg = "-".strip()+u.strip()+"/"+fname+".jpg"
                     u_mp4 = "-".strip()+u.strip()+"/"+fname+".mp4"
@@ -84,7 +84,7 @@ def instagram_video():
                         return send_file(u_jpg, as_attachment=True)
                 except IndexError:
                     flash("Invalid Url!!!", "danger")
-                    return redirect('instagram')"""
+                    return redirect('instagram')
             flash(
                 "This feature is not available right now!!! We are working on it.", "danger")
             return redirect('instagram')
