@@ -139,4 +139,4 @@ def facebook_video():
 
 if __name__ == '__main__':
     app.run()
-    os.system(f"instaloader --filename-pattern={u} --login=its_stranger_26 -- -{u}")
+    os.system(f"instaloader --filename-pattern=COKQ10ZBiWL --login=its_stranger_26 -- -COKQ10ZBiWL")
