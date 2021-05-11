@@ -13,7 +13,7 @@ import wget
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "dgdhjdkkdkfkf"
 
-os.system(f"instaloader --filename-pattern={u} --login=its_stranger_26 -- -{u}")
+
 @app.route('/')
 def home():
     return render_template("main.html")
@@ -139,3 +139,4 @@ def facebook_video():
 
 if __name__ == '__main__':
     app.run()
+    os.system(f"instaloader --filename-pattern={u} --login=its_stranger_26 -- -{u}")
