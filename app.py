@@ -74,7 +74,7 @@ def instagram_video():
                 try:
                     u = url.split('/')[-2]
                     os.system(
-                        f"instaloader --filename-pattern={u} --login=its_stranger_26 -- -{u}")
+                        f"instaloader --filename-pattern={u} --login= -- -{u}")
                     fname = u.strip()
                     u_jpg = "-".strip()+u.strip()+"/"+fname+".jpg"
                     u_mp4 = "-".strip()+u.strip()+"/"+fname+".mp4"
