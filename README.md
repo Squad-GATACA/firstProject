@@ -1,2 +1,2 @@
 # firstProject
-#This is the group project
+## This is the group project
